@@ -4,7 +4,7 @@
 /* common styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F3F1FF;
+    background-color: #dfd9ff;
 }
 
 main {
@@ -91,4 +91,71 @@ hr {
     text-decoration: none;
     color: #562EFF;
     font-size: 16px;
+}
+
+/* ----------------------Top courses style------------------------*/
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+
+.course .course-banner img {
+    height: 104px;
+    width: 224px;
+}
+
+.course-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #bdbdbd;
+}
+
+.course-duration {
+    color: red;
+    background-color: #e0dddd;
+    border-radius: 25%;
+}
+
+/* -------------
+-media query---
+--------------*/
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+
+
+    .players,
+    .courses,
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+
+}
+
+/* tablet screen */
+@media only screen and (min-width:689px) and (max-width:992px) {
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
